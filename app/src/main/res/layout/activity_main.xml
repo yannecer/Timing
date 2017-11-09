@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context="com.necer.timing.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="设置总时间" />
+
+        <EditText
+            android:id="@+id/et_totle_time"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:hint="输入总时间（分钟）"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:layout_margin="5dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/bg_et"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="设置练习时间" />
+
+
+    <EditText
+        android:id="@+id/et_exercise_time"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:hint="输入练习时间（秒）"
+        android:background="@drawable/bg_et"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+
+        android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="设置休息时间"
+
+        />
+
+
+    <EditText
+        android:id="@+id/et_interval_time"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:hint="输入休息时间（秒）"
+        android:background="@drawable/bg_et"
+        android:textSize="14sp"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+
+        android:inputType="number" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text = "00:00:00"/>
+
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text = "准备"/>
+
+    <com.necer.timing.WaterWaveProgress
+        android:id="@+id/waterWaveProgress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        app:waterWaveBgColor="#ffca60"
+        app:waterWaveColor="@android:color/holo_orange_dark" />
+
+    <Button
+        android:id="@+id/bt_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="option"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="开始" />
+
+</LinearLayout>
