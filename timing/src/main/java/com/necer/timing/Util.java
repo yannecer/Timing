@@ -1,16 +1,24 @@
 package com.necer.timing;
 
-import android.widget.EditText;
+import android.content.Context;
+import android.util.TypedValue;
 
 /**
- * Created by necer on 2017/11/8.
+ * Created by necer on 2018/12/12.
  */
+public class Util {
 
-public class Utils {
+    public static float sp2px(Context context, float spVal) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
+                spVal, context.getResources().getDisplayMetrics());
+    }
 
+    public static float dp2px(Context context, int dpVal) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                dpVal, context.getResources().getDisplayMetrics());
+    }
 
-
-    public static String changeTime(int second) {
+    public static String changeTime(int second, boolean isDividerText) {
         int h = 0;
         int d = 0;
         int s = 0;
@@ -34,25 +42,10 @@ public class Utils {
             }
         }
 
-
         String hour = (h + "").length() == 1 ? ("0" + h) : (h + "");
         String min = (d + "").length() == 1 ? ("0" + d) : (d + "");
         String sec = (s + "").length() == 1 ? ("0" + s) : (s + "");
 
-        return hour + ":" + min + ":" + sec + "";
+        return hour + (isDividerText ? "时" : ":") + min + (isDividerText ? "分" : ":") + sec + (isDividerText ? "秒" : "");
     }
-
-
-    public static boolean isEmpty(EditText editText) {
-        String string = editText.getText().toString();
-        return string.isEmpty();
-    }
-
-    public static int getTime(EditText editText) {
-        String string = editText.getText().toString();
-        return Integer.parseInt(string);
-    }
-
-
-
 }
