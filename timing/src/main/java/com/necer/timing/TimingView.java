@@ -38,6 +38,7 @@ public class TimingView extends AppCompatTextView {
         dividerTextSize = ta.getDimension(R.styleable.Timing_dividerTextSize, Util.sp2px(context, 14));
         ta.recycle();
 
+        setContent(Util.changeTime(second,isDividerText));
 
     }
 

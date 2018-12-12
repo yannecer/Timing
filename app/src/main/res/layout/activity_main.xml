@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
 
 
     <com.necer.timing.TimingView
@@ -12,27 +13,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:dividerColor="#ff00ff"
-        app:isDividerText="false"
         app:dividerTextSize="20sp"
-        app:dividerDistance="10dp"
-        app:second="359999"
-        />
+        app:isDividerText="false"
+        app:isVerticalCenter="true"
+        app:second="359999" />
 
+    <com.necer.timing.TimingView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:dividerColor="#000000"
+        app:dividerDistance="10dp"
+
+        app:dividerTextSize="14sp"
+        app:isDividerText="true"
+        app:second="20" />
+
+    <com.necer.timing.TimingView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:dividerColor="#666666"
+        app:dividerDistance="10dp"
+        app:dividerTextSize="14sp"
+        app:isDividerText="true"
+        app:isVerticalCenter="false"
+        app:second="20" />
 
 
     <com.necer.timing.CountDownView
         android:id="@+id/countDownView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:unClickText="获取验证码"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         app:suffixText="秒后重新获取"
-        android:gravity="center"/>
+        app:unClickText="获取验证码" />
 
-
-
-
+    <com.necer.timing.CountDownView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:suffixText="秒后重新获取"
+        app:unClickText="获取验证码" />
 
 
 </LinearLayout>

@@ -67,7 +67,7 @@ public class CountDownView extends AppCompatTextView {
         init();
     }
 
-    public void setTextStyle(String unClickText, int unClickColor, int clickedNumColor, String suffixText, int suffixColor) {
+    public void setStyle(String unClickText, int unClickColor, int clickedNumColor, String suffixText, int suffixColor) {
         this.unClickText = unClickText;
         this.unClickColor = unClickColor;
         this.clickedNumColor = clickedNumColor;

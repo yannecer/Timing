@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -32,3 +33,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+publish {
+    userOrg = 'necerr'//bintray.com用户名
+    repoName = 'maven'//bintray仓库
+    groupId = 'com.necer'//jcenter上的路径
+    artifactId = 'timing'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = '倒计时'
+    website = 'https://github.com/yannecer/Timing'
+}
+
